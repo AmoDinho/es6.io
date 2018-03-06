@@ -6,18 +6,43 @@
 </head>
 <body>
 <script>
-  {
-    const name = 'wes';
-    console.log(name);
-  }
+/* Notes
 
-  for(let i = 0; i < 10; i++) {
-    console.log(i);
-    setTimeout(function() {
-      console.log('The number is ' + i);
-    },1000);
-  }
+IFFE
 
+*/
+
+//Right Way 
+{
+  const car ='tesla';
+  console.log(car)
+}
+
+//Wrong Way
+(function(){
+
+var name = 'Amo';
+console.log(name)
+})();
+
+//With for loops
+for(var i=0;i<10;i++){
+console.log(i);
+setTimeout(function(){
+  console.log('The Number is' +i);
+},1000);
+
+}
+
+//Using Let
+
+for(let i=0;i<10;i++){
+console.log(i);
+setTimeout(function(){
+  console.log('The Number is' +i);
+},1000);
+
+}
 </script>
 </body>
 </html>
