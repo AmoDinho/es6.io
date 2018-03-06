@@ -6,16 +6,31 @@
 </head>
 <body>
 <script>
+
+  /*
+  Const vars cannot be UPDATED while let variables can be updated .
+  Const is not immutable
+  */
+  
   const key = 'abc123';
   let points = 50;
   let winner = false;
 
-  const person = {
-    name: 'Wes',
-    age: 28
-  }
+//let points = 60; //wont work cant be decleared twice in smae scope
 
-  const wes = Object.freeze(person);
+if(points > 40){
+  let winner = true; //winner are both scoped differently it is let
+}
+
+//key = 'abc12345'; //Cannot be updated
+
+
+const person = {
+  name: 'Amo',
+  age: 23
+}
+
+const Sio =  Object.freeze(person) // Even with this it still makes it non immutable.
 
 </script>
 </body>

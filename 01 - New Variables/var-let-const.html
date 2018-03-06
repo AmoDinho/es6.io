@@ -6,20 +6,37 @@
 </head>
 <body>
 <script>
-  function setWidth() {
-    var width = 100;
-    console.log(width);
-  }
-  setWidth();
+ /*VAR SCOPING REFRESHER:
 
-  var age = 100;
-  if(age > 12) {
-    const dogYears = age * 7;
-    console.log(`You are ${dogYears} dog years old!`);
-  }
+********************Notes********************************
 
-  let height = 200;
-  const key = 'abc123';
+var - can be reassigned/updated & function scope
+  
+let - scoped to the block {} - block statement
+  
+const - scoped to the block {} - block statement
+
+
+
+ */
+/*var width = 100;
+console.log(width)
+*/
+
+function setWidth() {
+  var width = 100;
+  console.log(width);
+}
+
+setWidth();
+
+var age =100;
+
+if(age > 12) {
+  let dogYears = age * 7;
+  console.log(`You are ${dogYears} dog years old`);
+}  
+
 </script>
 </body>
 </html>
