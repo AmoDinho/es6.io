@@ -61,21 +61,25 @@
   </div>
 
   <script>
-    const box = document.querySelector('.box');
-    box.addEventListener('click', function() {
-      let first = 'opening';
-      let second = 'open';
+   /*nOTES */
 
-      if(this.classList.contains(first)) {
-        [first, second] = [second, first];
-      }
+//If i were to swap the function call for an arrow function, it would inherit the window attribute of the browser
+   const box = document.querySelector('.box');
+   box.addEventListener('click',function(){
 
-      this.classList.toggle(first);
-      setTimeout(() => {
-        console.log(this);
-        this.classList.toggle(second);
-      }, 500);
-    });
+let first = 'opening';
+let second = 'open';
+
+if(this.classList.contains(first)){
+  //Switch them 
+  [first,second] = [second,first];
+}
+
+  this.classList.toggle('opening');
+  setTimeout(() => {
+    this.classList.toggle(second);
+  },500);
+   });
   </script>
 
 </body>

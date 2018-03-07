@@ -6,29 +6,49 @@
 </head>
 <body>
 <script>
-  const names = ['wes', 'kait', 'lux'];
+  /*Notes
+  
+  Named function for figuring out which funtion is broken
 
-  const fullNames = names.map(function(name) {
-    return `${name} bos`;
+  arrow functions don't have names'
+   */
+
+  const shoes = ['Adidas', 'New Balance' , 'Nike'];
+
+//Original function method
+  const type = shoes.map(function(shoes){
+    return `${shoes} boost`;
+
   });
 
-  const fullNames2 = names.map((name) => {
-    return `${name} bos`;
-  });
+console.log(type);
 
-  const fullNames3 = names.map(name => {
-    return `${name} bos`;
-  });
+//Inclusion of arrow function
+const  type2 = shoes.map((shoes) =>{
+  return `${shoes} boost`;
+});
 
-  const fullNames4 = names.map(name => `${name} bos`);
+console.log(type2);
 
-  const fullNames5 = names.map(() => `cool bos`);
+//Inclusion of arrow function wrapping const variable in brackets
+const type3 = shoes.map(shoes => {
+  return `${shoes} boost`
+});
 
-  const sayMyName = (name) => {
-    alert(`Hello ${name}!`)
-  }
+console.log(type3);
 
-  sayMyName('Wes');
+//Arrow function on one line
+const type4 = shoes.map(shoes => `${shoes} boost`);
+console.log(type4);
+
+//Arrow function on one line but passing empty arguments
+const type5 = shoes.map(() => `cool boost`);
+console.log(type5);
+
+//Anonomus Fucntion
+const sayMyName = (name ) => {alert(`Hello ${shoes}`)}
+
+sayMyName('Umbro');
 
 </script>
 </body>
