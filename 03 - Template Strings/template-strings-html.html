@@ -6,27 +6,104 @@
 </head>
 <body>
 <script>
-  const person = {
-    name: 'Wes',
-    job: 'Web Developer',
-    city: 'Hamilton',
-    bio: 'Wes is a really cool guy that loves to teach web development!',
+  /*Notes 
+  
+  for nesting: <ul class ="dogs"><li>${dogs[0].name}</li></ul> 
+  but this is not scalable.
+                 
+  */
+
+  //Here we used temp strings to spit up html markup and nest
+  const app = {
+    name: 'Paramedic',
+    type: 'health',
+    developer: 'Starboi',
+    review: 'Paramedic is not helpful at all, it sends my data to 3rd parties.',
   };
 
-  const markup = `
-    <div class="person">
-      <h2>
-        ${person.name}
-        <span class="job">${person.job}</span>
-      </h2>
-      <p class="location">${person.city}</p>
-      <p class="bio">${person.bio}</p>
-    </div>
+const markup = `
+ <div class="person"> 
+   <h2>${app.name}
+     <span class="job">${app.type}</span>
+   </h2>
+   <p class="location">${app.developer}</p>
+   <p class="bio">${app.review}</p>
+   
+ </div>
+`;
+console.log(markup);
+//puts the markup in the browser windo
+document.body.innerHTML = markup;
+
+
+//Now we want to loop temp stings
+
+const phones =[
+{make:'iPhone', price: 20},
+{make:'Google Pixel', price: 50},
+{make:'Galaxy', price: 30}
+
+];
+
+
+
+const markup2 = `
+<ul class="phones">
+  ${phones.map(phone => `<li>${phone.make} is ${phone.price * 11.05}</li>` ).join('')}
+</ul>
+
+
+`;
+document.body.innerHTML = markup2;
+console.log(markup2)
+
+//If we want to use if statements in temp strings
+
+const song = {
+name: 'X',
+artist: 'Kendrick Lamar',
+featuring: 'Saudi, Schoolboy Q & 2 Chainz'
+};
+
+//if there is a featuring artist show it, if not show nothing
+const markup3 = `
+<div class="song">
+  <p>
+    ${song.name} - ${song.artist}
+    
+    ${song.featuring ? `    (featuring ${song.featuring})
+` : ''}
+  </p>
+</div>
+`;
+document.body.innerHTML = markup3;
+console.log(markup3)
+
+
+//If tour data is too large, you can create a render function
+const beer = {
+name: 'Lion',
+brewery: 'Newlands SAB Brewery',
+keywords: ['pale','cloudy','spiced','crisp']
+};
+
+function renderKeywords(keywords){
+  return `
+  <ul>
+    ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+  </ul>
   `;
+}
 
-  console.log(markup);
-  document.body.innerHTML = markup;
+const markup4 = `
+<div class="beer">
+  <h2>${beer.name}</h2>
+  <p class="brewery">${beer.brewery}</p>
+  ${renderKeywords(beer.keywords)}
+</div>
+`;
 
+document.body.innerHTML = markup4;
 </script>
 </body>
 </html>

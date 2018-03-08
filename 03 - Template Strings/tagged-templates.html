@@ -4,25 +4,31 @@
   <meta charset="UTF-8">
   <title>Tagged Templates</title>
   <style>
-    .hl {
-      background: #ffc600;
+    .hl{
+      background: yellow;
     }
   </style>
 </head>
 <body>
 <script>
-  function highlight(strings, ...values) {
-    let str = '';
-    strings.forEach((string, i) => {
-      str += `${string} <span contenteditable class="hl">${values[i] || ''}</span>`;
-    });
+
+//adding "...values" lets the function take in multiple arguments
+  function highlight(strings, ...values){
+//debuger; can show us the local scope of the function
+let str = ``;
+strings.forEach((string, i) => {
+str += `${string} <span contenteditable class="hl">${values[i] || ''}</span>`;
+
+});
     return str;
   }
 
-  const name = 'Snickers';
-  const age = 100;
+  //We can tag temp strings through a tag template.
+ 
+  const car = 'Tesla';
+  const price = 9000;
 
-  const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
+  const sentence =highlight `my car is a  ${car} and it costs zar ${price}`;
   document.body.innerHTML = sentence;
   console.log(sentence);
 

@@ -6,10 +6,19 @@
 </head>
 <body>
 <script>
-  const name = 'Snickers';
-  const age = 2;
-  const sentence = `My dog ${name} is ${age * 7} years old.`;
-  console.log(sentence);
+  /* Notes 
+  BASICALLY we used template strings to display the value of a variable
+  */
+  const coin = 'StarCoin';
+  const price = 12.09;
+
+//Regualr way
+const sentence = `My coin` + coin  +` is worth $ `+ price*3 + ` .`;
+console.log(sentence)
+
+//Template Literals
+  const sentence2 = `My coin ${coin} is worth $ ${price * 3} .`;
+  console.log(sentence2);
 
 </script>
 </body>
