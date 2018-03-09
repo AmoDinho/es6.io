@@ -15,22 +15,40 @@ const make = 'BMW';
 const model = 'x5';
 const colour = 'Royal Blue';
 
+/*
 // .startsWith()
+course.startswith('RFB') // DOES NOT WORK FOR LOWERCASES -USE REGEX
+
+flightNumber.startsWith('AC') //fALSE
+
+flightNumber.startsWith('AC',3) // True - start after 3 characters 
+
+
 
 // .endsWith()
 
+flightNumber.endsWith('jz') //True
+accountNumber.endsWith('RT',11) //oNLY TAKE FIRST 11 NUMBERS
 // .includes()
-
+flightNumber.includes('AC') //True
 // .repeat()
+console.log();
+course.repeat(10) //will repeat that variable 10 times
 
-function leftPad(str, length = 20) {
-  return `→ ${' '.repeat(length - str.length)}${str}`;
+*/
+//A left pad function
+function leftPad(str, length =20){
+  return `-> ${' '.repeat(length - str.length)}${str}`;
 }
 
+
 console.log(leftPad(make));
+
 console.log(leftPad(model));
+
 console.log(leftPad(colour));
 
+/*`${'Bob' * 5`.repeat(10) + 'Batman'; */
 
 </script>
 
