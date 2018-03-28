@@ -6,6 +6,12 @@
 </head>
 <body>
 <script>
+/* Notes 
+Destructuring helps us getting multiple properities out of a data structure 
+
+*/
+
+
   const person = {
     first: 'Wes',
     last: 'Bos',
@@ -13,8 +19,16 @@
     city: 'Hamilton',
     twitter: '@wesbos'
   };
+ 
+   //Ineffiecent
+ // const first = person.first;
 
-  const { first, last, twitter } = person;
+
+  //Destructing syntax
+  const { first, last} = person; 
+
+
+  //Nested Data
 
   const wes = {
     first: 'Wes',
@@ -30,10 +44,32 @@
     }
   };
 
-  const { twitter: tweet, facebook: fb } = wes.links.social;
+  
+//Ineffiecnt
+  //const twitter = wes.links.social.twitter;
 
-  const settings = { width: 300, color: 'black' }  // height, fontSize
-  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+  //Destructed way
+  const {twitter , facebook} = wes.links.social;
+
+
+  //If we want to use a different property key
+
+  const{twitter: tweet ,  facebook:fb} = wes.links.social;
+
+
+  //Set Defaults
+  const settings = {width: 300, color: 'black'} // height & font size
+
+
+  const {width = 100, height=100, color ='blue', fontSize =25} = settings; 
+
+
+
+  //Object Destructuring with variable renaming & default values
+  const {w:width =400, h:height =500} = {w:800}
+
+  
+
 
 </script>
 </body>
