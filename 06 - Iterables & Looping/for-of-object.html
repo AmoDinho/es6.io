@@ -7,6 +7,8 @@
 <body>
 
 <script>
+
+  //Cant iterate over an object
   const apple = {
     color: 'Red',
     size: 'Medium',
@@ -14,9 +16,9 @@
     sugar: 10
   };
 
-  for (const prop in apple) {
+  for (const prop in Object.keys(apple)) {
     const value = apple[prop];
-    console.log(value, prop);
+   console.log(value , prop);
   }
 
 </script>
