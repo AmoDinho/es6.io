@@ -8,17 +8,18 @@
 <script>
   const inventors = ['Einstein', 'Newton', 'Galileo'];
   const newInventors = ['Musk', 'Jobs'];
+  
+  //inventors.push.apply(inventors,newInventors);
   inventors.push(...newInventors);
   console.log(inventors);
 
-  const name = ['Wes', 'Bos'];
+  const name =['Wes','Bos'];
 
-  function sayHi(first, last) {
-    alert(`Hey there ${first} ${last}`);
+  function sayHi(first,last){
+    alert(`Hey There ${first} ${last}`);
   }
 
   sayHi(...name);
-
 </script>
 </body>
 </html>
