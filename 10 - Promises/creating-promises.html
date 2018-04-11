@@ -6,20 +6,25 @@
 </head>
 <body>
 <script>
-  const p = new Promise((resolve, reject) => {
+
+  const p = new Promise((resolve,reject) => {
+
     setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
-    }, 1000);
+
+      reject(Error('Amo is sad'));
+  },1000);
+
+
   });
 
-  p
-    .then(data => {
-      console.log(data);
-    })
-    .catch(err => {
-      console.error(err);
-    });
 
+  p 
+   .then(data => {
+     console.log(data);
+   })
+   .catch(err =>{
+     console.error(err);
+   })
 </script>
 </body>
 </html>
