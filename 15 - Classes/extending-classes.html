@@ -7,33 +7,40 @@
 <body>
 <script>
   class Animal {
-    constructor(name) {
-      this.name = name;
-      this.thirst = 100;
-      this.belly = [];
-    }
-    drink() {
-      this.thirst -= 10;
-      return this.thirst;
-    }
-    eat(food) {
-      this.belly.push(food);
-      return this.belly;
-    }
+constructor(name){
+  this.name = name;
+  this.thirsty = 100;
+  this.belly = [];
+
+  }
+  drink(){
+    this.thirsty -= 10;
+    return this.thirsty;
+  }
+  eat(food){
+    this.belly.push(food);
+    return this.belly;
   }
 
-  class Dog extends Animal {
-    constructor(name, breed) {
-      super(name);
-      this.breed = breed;
-    }
-    bark() {
-      console.log('Bark bark I\'m a dog');
-    }
   }
+
+
+ class Dog extends Animal{
+
+constructor(name,breed){
+
+  super(name);
+this.breed = breed;
+}
+bark(){
+  console.log('wokaj');
+}
+  }
+
 
   const rhino = new Animal('Rhiney');
-  const snickers = new Dog('Snickers', 'King Charles');
+const leo = new Dog('Leonared','Crazy Dog');
+
 
 </script>
 </body>

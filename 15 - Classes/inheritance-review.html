@@ -6,24 +6,34 @@
 </head>
 <body>
 <script>
-  function Dog(name, breed) {
-    this.name = name;
-    this.breed = breed;
-  }
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark! My name is ${this.name}`)
-  }
+ /*New way to write inheritance 
+ 
 
-  const snickers = new Dog('Snickers', 'King Charles');
-  const sunny = new Dog('Sunny', 'Golden Doodle');
+ Let the record reflect that I am skeptical
+ */
 
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark🇨🇦🇨🇦🇨🇦! My name is ${this.name} and I'm a ${this.breed}`);
-  }
 
-  Dog.prototype.cuddle = function() {
-    console.log(`I love you owner!`);
-  }
+ function Dog(name, breed){
+   this.name = name;
+   this.breed = breed;
+ }
+
+ Dog.prototype.bark = function(){
+   console.log(`Bark bark my name is ${this.name}`);
+ }
+
+
+ const snickers = new Dog('Leo', 'Special Dog');
+
+ const sunny = new Dog('Tatmtam', 'lazy  Dog');
+
+ Dog.prototype.bark = function(){
+  console.log(`Bark bark @@@@ my name is ${this.name} and I am a ${this.breed}`);
+}
+
+ Dog.prototype.cuddle = function(){
+  console.log(`You are awesome`);
+}
 </script>
 </body>
 </html>
