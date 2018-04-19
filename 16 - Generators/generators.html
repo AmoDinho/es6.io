@@ -6,16 +6,14 @@
 </head>
 <body>
 <script>
-  function* listPeople() {
-    let i = 0;
-    yield i;
-    i++;
-    yield i;
-    i++;
-    yield i;
-  }
-
-  const people = listPeople();
+    function* listPeople() {
+      yield 'Amo';
+      yield 'Ruby';
+      yield 'Nikita';
+      
+    }
+  
+    const people = listPeople();
 
   const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879 },
@@ -27,14 +25,15 @@
     { first: 'Max', last: 'Planck', year: 1858 },
   ];
 
-  function* loop(arr) {
-    console.log(inventors);
-    for (const item of arr) {
-      yield item;
-    }
+function* loop(arr){
+  for (const item of arr){
+    yield item;
   }
 
-  const inventorGen = loop(inventors);
+}
+
+const inventorGen = loop(inventors);
+
 
 
 </script>
