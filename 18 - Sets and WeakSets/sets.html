@@ -6,20 +6,36 @@
 </head>
 <body>
 <script>
-  const people = new Set();
-  people.add('Wes');
-  people.add('Snickers');
-  people.add('Kait');
+ /* Unique array for adding same item once , cant be indexed or called indiviudally*/
 
-  for (const person of  people) {
-    console.log(person);
-  }
+ const people = new Set();
 
-  const students = new Set(['Wes', 'Kara', 'Tony']);
+ people.add('Iron MAN');
+ people.add('tHOR');
+ people.add('Groot');
 
-  const dogs = ['Snickers', 'Sunny'];
-  const dogSet = new Set(dogs);
+ /* Function methods 
 
+ people.size
+ people.delete('name of item')
+ people.clear
+ people.values()
+ people.keys()
+ people.entries()
+ people.has('name of item')
+
+
+ */
+
+ for ( const peop of people){
+   console.log(peop);
+ }
+
+
+ const students = new Set(['mE', 'Cristy','NomNom']);
+
+ const dogs = ['Tatum', 'Leo'];
+ const dogSet = new Set(dogs);
 </script>
 </body>
 </html>

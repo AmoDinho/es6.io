@@ -6,17 +6,26 @@
 </head>
 <body>
 <script>
-  const dogs = new Map();
+ /* Notes 
+ Has a key and value
 
-  dogs.set('Snickers', 3);
-  dogs.set('Sunny', 2);
-  dogs.set('Hugo', 10);
+ .has()
+ .get()
+ .delete()
 
-  dogs.forEach((val, key) => console.log(val, key));
+ */ 
+const dogs = new Map();
 
-  for (const [key, val] of dogs) {
-    console.log(key, val);
-  }
+dogs.set('Tamtum', 4);
+dogs.set('Leo', 5);
+dogs.set('Dexter', 10);
+
+
+dogs.forEach((val,key) => console.log(val, key));
+
+for (const [key,val] of dogs){
+  console.log(key,val);
+}
 
 </script>
 </body>
