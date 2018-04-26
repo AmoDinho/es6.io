@@ -10,6 +10,52 @@
 <body>
   <script>
 
+
+    /* Working example
+
+    fetch('https://api.github.com/users/wesbos').then(res =>{
+      return res.json();
+      
+    }).then(res =>{
+      console.log(res);
+    }).catch(err =>{
+      console.log('OH NO!!!');
+      console.error()
+    })
+
+    /* Not working coed 
+
+    fetch('api.github.com/users/wesbos').then(res =>{
+      return res.json();
+      
+    }).then(res =>{
+      console.log(res);
+    }).catch(err =>{
+      console.error('OH NO!!!');
+      console.error(err);
+
+    })
+
+    */
+
+
+    //Video part of the lesson
+
+    const video = document.querySelector('.handsome');
+
+
+    navigator.mediaDevices.getUserMedia({ video: true}).then(mediaStream =>{
+      //console.log(mediaStream);
+    
+    
+    video.srcObject = mediaStream;
+    video.load();
+    video.play();
+
+
+}).catch(err =>{
+  console.log(err)
+})
   </script>
 </body>
 
