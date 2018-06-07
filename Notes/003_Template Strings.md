@@ -95,3 +95,8 @@ const song = {
   ```
 
   If you remove any values from the featuring variable it will just display the artist.
+
+  Run this example [Add link to tagged-templates.html]
+
+  Basically we can write functions that allow us to easily modify strings ...the DOM MAYBE? not too sure..
+
