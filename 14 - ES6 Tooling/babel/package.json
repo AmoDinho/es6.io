@@ -11,12 +11,16 @@
   "devDependencies": {
     "babel-cli": "^7.0.0-beta.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^7.0.0-beta.3"
+    "babel-preset-env": "^7.0.0-beta.3",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1"
   },
   "babel": {
-    
-    "plugins": ["transform-object-rest-spread"]
-  ,
+    "plugins": [
+      "transform-object-rest-spread"
+    ],
     "presets": [
       [
         "env",
