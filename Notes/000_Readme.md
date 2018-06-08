@@ -21,3 +21,5 @@ The purpose of these notes to is serve as a reference for understanding the new 
 * Sets and WeakSets
 * Maps and WeakMaps
 * Async + Await
+
+References : exploringjs.com[http://exploringjs.com/]
